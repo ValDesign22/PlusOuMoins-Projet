@@ -10,9 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/plusoumoins")
- */
 class PlusOuMoins extends AbstractController
 {
     private int $configMin;
@@ -27,7 +24,7 @@ class PlusOuMoins extends AbstractController
     }
 
     /**
-     * @Route("/jouer", name="plusoumoins_jouer")
+     * @Route("/", name="plusoumoins_jouer")
      */
     public function jouer(SessionInterface $session, Request $request): Response
     {
