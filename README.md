@@ -31,3 +31,10 @@ composer install
 ```shell
 php -S localhost:8000 -t ./public/
 ```
+
+# Ressources
+
+- https://symfony.com/doc/current/index.html
+- https://symfonycasts.com/tracks/symfony
+- https://www.php.net/manual/fr/
+- https://getcomposer.org/doc/
