@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block titre %}Plus ou Moins{% endblock %}
+
+{% block body %}
+    {% if error is not empty %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
+    {% if success is not empty %}
+        <div class="alert alert-success" role="alert">
+            {{ success }}
+        </div>
+    {% endif %}
+    <form method="POST" class="m-5 d-flex flex-column">
+        <label for="nombre" class="form-label text-center">Devine le nombre entre {{ min }} et {{ max }} ({{ essais }} essais restants)</label>
+        <input type="number" id="nombre" name="nombre" max="{{ max }}" min="{{ min }}" class="form-control" value="{{ precedent }}"/>
+        <div class="text-center">
+            <input type="submit" value="Envoyer le nombre" class="btn btn-primary mt-3"/>
+            <a href="{{ path('plusoumoins_reinitialiser') }}" class="btn btn-warning mt-3">Redémarrer</a>
+        </div>
+    </form>
+{% endblock %}
